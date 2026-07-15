@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Razamart</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="project1.css">
+</head>
+<body>
+<div class="page-loader">
+  <img src="razamart_logo.png" alt="Loading" class="loader-logo">
+  <div class="spinner"></div>
+</div>
+<!-- ===================== TOP NAVBAR ===================== -->
+<header class="navbar">
+
+  <div class="nav-logo" >
+    <a href="#" >
+      <img src="razamart_logo.png" alt="R">
+    </a>
+  </div>
+
+  <div class="nav-deliver">
+    <i class="fa-solid fa-location-dot"></i>
+    <div class="deliver-text">
+      <span><a href="https://www.google.com/maps">Deliver to</a></span>
+      <strong><a href="https://www.google.com/maps">Your Address</a></strong>
+    </div>
+  </div>
+
+  <div class="nav-search">
+    <select class="search-select">
+      
+      <option>All Departments</option>
+      <option>Arts & Crafts</option>
+      <option>Automotive</option>
+      <option>Baby</option>
+      <option>Beauty & Personal Care</option>
+      <option>Books</option>
+      <option>Boys' Fashion</option>
+      <option>Computers</option>
+      <option>Deals</option>
+      <option>Digital Music</option>
+      <option>Electronics</option>
+      <option>Girls' Fashion</option>
+      <option>Health & Household</option>
+      <option>Home & Kitchen</option>
+      <option>Industrial & Scientific</option>
+      <option>Kindle Store</option>
+      <option>Luggage</option>
+      <option>Men's Fashion</option>
+      <option>Movies & TV</option>
+      <option>Music, CDs & Vinyl</option>
+    
+    </select>
+    <input type="text" placeholder="Search razamart">
+    <button class="search-btn">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  
+  </div>
+
+  <div class="nav-right">
+
+    <!-- LANGUAGE SWITCHER (click to open image 2 style dropdown) -->
+    <div class="nav-item lang-item" onclick="toggleDropdown('langMenu')">
+      <span class="flag-icon" >🇺🇸</span>
+      <strong>EN</strong>
+      <i class="fa-solid fa-chevron-down small-arrow"></i>
+
+      <div class="dropdown lang-dropdown" id="langMenu">
+        <p class="dropdown-title">Change language</p>
+        <label class="radio-row"><input type="radio" name="lang" checked> English - EN</label>
+        <label class="radio-row"><input type="radio" name="lang"> español - ES</label>
+        <label class="radio-row"><input type="radio" name="lang"> العربية - AR</label>
+        <label class="radio-row"><input type="radio" name="lang"> Deutsch - DE</label>
+        <label class="radio-row"><input type="radio" name="lang"> עברית - HE</label>
+        <label class="radio-row"><input type="radio" name="lang"> 한국어 - KO</label>
+        <label class="radio-row"><input type="radio" name="lang"> português - PT</label>
+        <label class="radio-row"><input type="radio" name="lang"> 中文 (简体) - ZH</label>
+        <label class="radio-row"><input type="radio" name="lang"> 中文 (繁體) - ZH</label>
+        <hr>
+        <p class="dropdown-title">Change currency</p>
+        <div class="currency-row">
+          <span>$ - USD - US Dollar</span>
+          <a href="#">Change</a>
+        </div>
+        <hr>
+        <p class="shipping-note">🇺🇸 You are shopping on razamart.com</p>
+        <a href="#" class="change-country">Change country/region.</a>
+      </div>
+    </div>
+
+    <!-- ACCOUNT & LISTS (click to open image 3 style dropdown) -->
+    <div class="nav-item account-item" onclick="toggleDropdown('accountMenu')">
+      <i class="fa-solid fa-user"></i>
+      <div class="nav-text">
+        <span>Hello, sign in</span>
+        <strong>Account &amp; Lists</strong>
+      </div>
+      <i class="fa-solid fa-chevron-down small-arrow"></i>
+
+      <div class="dropdown account-dropdown" id="accountMenu">
+        <div class="account-header">
+          <i class="fa-solid fa-circle-user profile-icon"></i>
+          <div>
+            <p class="profile-name">Your Name</p>
+            <p class="profile-email">you@example.com</p>
+          </div>
+          <div class="account-links">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Sign Out</a>
+          </div>
+        </div>
+        <div class="account-columns">
+          <div>
+            <p class="col-title">Your Lists</p>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Create a List</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Find a List or Registry</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Your Saved Items</a>
+          </div>
+          <div>
+            <p class="col-title">Your Account</p>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Account</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Orders</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Recommendations</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Browsing History</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Your Shopping preferences</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Watchlist</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Memberships & Subscriptions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <i class="fa-solid fa-clock-rotate-left"></i>
+      <div class="nav-text">
+        <span>Returns</span>
+        <strong>&amp; Orders</strong>
+      </div>
+    </div>
+
+    <div class="nav-item cart">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span class="cart-count">0</span>
+      <strong>Cart</strong>
+    </div>
+
+  </div>
+
+</header>
+
+<!-- ===================== SUB NAVBAR ===================== -->
+<nav class="subnav">
+  <div class="nav-item">
+    <i class="fa-solid fa-bars"></i>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">All</a>
+  </div class="sub2nav">
+  <a href="https://www.youtube.com/watch?v=_OBlgSz8sSM">Prime Video</a>
+  <a href="https://www.youtube.com/watch?v=J---aiyznGQ">Coupons</a>
+  <a href="https://www.youtube.com/watch?v=EwTZ2xpQwpA">Customer Service</a>
+  <a href="https://www.youtube.com/watch?v=OQSNhk5ICTI">Browsing History</a>
+  <a href="https://www.youtube.com/watch?v=9J62hGda9BQ&list=RD9J62hGda9BQ&start_radio=1">Today's Deals</a>
+  <a href="https://www.youtube.com/watch?v=aCbfMkh940Q">Registry</a>
+  <a href="https://www.youtube.com/watch?v=txqiwrbYGrs">Buy Again</a>
+  <a href="https://www.youtube.com/watch?v=Z3ZAGBL6UBA">Gift Cards</a>
+  <a href="https://www.youtube.com/watch?v=kJa2kwoZ2a4&list=RDkJa2kwoZ2a4&start_radio=1">Sell</a>
+</nav>
+
+<!-- ===================== HERO BANNER (CAROUSEL) ===================== -->
+<section class="hero">
+  <button class="hero-arrow left" onclick="changeSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+  <div class="hero-slide">
+    <img class="hero-image" src="banner1hero.jpg" alt="Hero banner 2">
+  </div>
+ <div class="hero-slide">
+    <img class="hero-image" src="bannerhero3.jpg" alt="Hero banner 2">
+  </div>
+
+  <div class="hero-slide">
+     <img class="hero-image" src="amazoneyecatch.jpg" alt="Hero banner 3">
+  </div>
+
+  <div class="hero-slide">
+    
+    <img class="hero-image" src="banner4hero.jpg" alt="Hero banner 4">
+  </div>
+  <div class="hero-slide">
+    
+    <img class="hero-image" src="banner5.jpg" alt="Hero banner 5">
+  </div>
+  <div class="hero-slide">
+    
+    <img class="hero-image" src="banner6.jpg" alt="Hero banner 6">
+  </div>
+  <div class="hero-slide">
+    
+    <img class="hero-image" src="abnner7.jpg" alt="Hero banner 7">
+  </div>
+  
+
+  <button class="hero-arrow right" onclick="changeSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
+
+  <div class="hero-dots">
+    <span class="dot active-dot" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+    <span class="dot" onclick="goToSlide(3)"></span>
+    <span class="dot" onclick="goToSlide(4)"></span>
+    <span class="dot" onclick="goToSlide(5)"></span>
+    <span class="dot" onclick="goToSlide(6)"></span>
+  
+
+  </div>
+</section>
+
+<!-- ===================== NOTICE BAR ===================== -->
+<div class="notice-bar">
+  You are on razamart.com. You can also shop on razamart India for millions of products with fast local delivery.
+  <a href="#">Click here to go to razamart.in</a>
+</div>
+
+<!-- ===================== FOUR COLUMN GRID ===================== -->
+<section class="grid-section">
+
+  <div class="grid-card">
+    <h3>Get your game on</h3>
+    <!-- PUT PRODUCT IMAGE HERE -->
+    <img src="gaming.jpg" alt="Gaming products">
+  </div>
+
+  <div class="grid-card">
+    <h3>Shop Fashion for less</h3>
+    <div class="mini-grid">
+      <div>
+        <img src="jeansunder50.jpg" alt="Jeans">
+        <p>Jeans under $50</p>
+      </div>
+      <div>
+        <img src="jeansunder25.jpg" alt="Tops">
+        <p>Tops under $25</p>
+      </div>
+      <div>
+        <img src="dress under 30.jpg" alt="Dresses">
+        <p>Dresses under $30</p>
+      </div>
+      <div>
+        <img src="shoesuder50.jpg" alt="Shoes">
+        <p>Shoes under $40</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-card">
+    <h3>Top categories in Kitchen appliances</h3>
+    <img src="cooker.jpg" alt="Cooker">
+    
+    <div class="mini-grid three">
+      <img src="coffee.jpg" alt="Coffee maker">
+      
+      <img src="pots and pans.jpg" alt="Cookware">
+      <img src="kettels.jpg" alt="Kettle">
+    </div>
+  </div>
+
+  <div class="grid-card">
+    <h3>Must-have school supplies</h3>
+    <div class="mini-grid">
+      <div>
+        <img src="backpacks.jpg" alt="Backpacks">
+        <p>Backpacks</p>
+      </div>
+      <div>
+        <img src="electronics.jpg" alt="Electronics">
+        <p>Electronics</p>
+      </div>
+      <div>
+        <img src="backpacks.jpg" alt="Stationery">
+        <p>Stationery</p>
+      </div>
+      <div>
+        <img src="fashion.jpg" alt="Kids clothes">
+        <p>Kids' clothes</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- ===================== SECOND GRID ROW ===================== -->
+<section class="grid-section">
+
+  <div class="grid-card">
+    <h3>Gear up to get fit</h3>
+    <div class="mini-grid">
+      <div><img src="small1.jpg" alt="Watches"><p>Watches</p></div>
+      <div><img src="small2.jpg" alt="sports wear"><p>sports wear</p></div>
+      <div><img src="smaall 3.jpg" alt="Equipment"><p>Sunglasses</p></div>
+      <div><img src="small4.jpg" alt="Shoes"><p>Shoes</p></div>
+    </div>
+    <a href="https://www.youtube.com/watch?v=kJa2kwoZ2a4&list=RDkJa2kwoZ2a4&start_radio=1" class="discover-link">Discover more</a>
+  </div>
+
+  <div class="grid-card">
+    <h3>Level up your PC here</h3>
+    <div class="mini-grid">
+      <div><img src="gaming1.jpg" alt="PS4"><p>Play station</p></div>
+      <div><img src="gaming2.jpg" alt="PCs"><p>PCs</p></div>
+      <div><img src="gaming3.jpg" alt="Hard drives"><p>Hard drives</p></div>
+      <div><img src="gaming4.jpg" alt="Monitors"><p>Monitors</p></div>
+    </div>
+    <a href="https://www.youtube.com/watch?v=kJa2kwoZ2a4&list=RDkJa2kwoZ2a4&start_radio=1" class="discover-link">Discover more in Home</a>
+  </div>
+
+  <div class="grid-card">
+    <h3>Shop for your home essentials</h3>
+    <div class="mini-grid">
+      <div><img src="cleaning1.jpg" alt="Cleaning tools"><p>Cleaning tools</p></div>
+      <div><img src="cleaning2.jpg" alt="Home storage"><p>Home storage</p></div>
+      <div><img src="cleaning3.jpg" alt="Home decor"><p>Home decor</p></div>
+      <div><img src="cleaning4.jpg" alt="Bedding"><p>Bedding</p></div>
+    </div>
+    <a href="https://www.youtube.com/watch?v=kJa2kwoZ2a4&list=RDkJa2kwoZ2a4&start_radio=1" class="discover-link">Discover more in Home</a>
+  </div>
+
+  <div class="grid-card">
+    <h3>Appliances for your home </h3>
+    <div class="mini-grid">
+      <div><img src="appliances1.jpg" alt="AC"><p>AC</p></div>
+      <div><img src="appliances2.jpg" alt="FRIDGE"><p>Fridge</p></div>
+      <div><img src="appliances3.jpg" alt="Microwave"><p>Microwave</p></div>
+      <div><img src="appliances4.jpg" alt="washing machine"><p>Washing machine</p></div>
+    </div>
+    <a href="https://www.youtube.com/watch?v=kJa2kwoZ2a4&list=RDkJa2kwoZ2a4&start_radio=1" class="discover-link">See more</a>
+  </div>
+
+</section>
+
+<!-- ===================== HORIZONTAL SCROLL ROW: KITCHEN & DINING ===================== -->
+<section class="scroll-section">
+  <h3>Curated collections from Emerging brands</h3>
+  <div class="scroll-row">
+    <img src="power1.jpg" alt="Product">
+    <img src="power2.jpg" alt="Product">
+    <img src="power3.jpg" alt="Product">
+    <img src="power4.jpg" alt="Product">
+    <img src="power5.jpg" alt="Product">
+    <img src="power6.jpg" alt="Product">
+    <img src="power7.jpg" alt="Product">
+    <img src="power8.jpg" alt="Product">
+    <img src="power9.jpg" alt="Product">
+    <img src="power1.jpg" alt="Product">
+    <img src="power2.jpg" alt="Product">
+    <img src="power3.jpg" alt="Product">
+    <img src="power4.jpg" alt="Product">
+    <img src="power5.jpg" alt="Product">
+    <img src="power6.jpg" alt="Product">
+    <img src="power7.jpg" alt="Product">
+    <img src="power8.jpg" alt="Product">
+    <img src="power1.jpg" alt="Product">
+    <img src="power2.jpg" alt="Product">
+    <img src="power3.jpg" alt="Product">
+    <img src="power4.jpg" alt="Product">
+    <img src="power5.jpg" alt="Product">
+    <img src="power6.jpg" alt="Product">
+    <img src="power7.jpg" alt="Product">
+    <img src="power8.jpg" alt="Product">
+    <img src="power9.jpg" alt="Product">
+    
+  </div>
+</section>
+
+<!-- ===================== HORIZONTAL SCROLL ROW: CELL PHONES ===================== -->
+<section class="scroll-section">
+  <h3>Best Sellers on Razamart</h3>
+  <div class="scroll-row">
+    <img src="power8.jpg" alt="Product">
+    <img src="power9.jpg" alt="Product">
+    <img src="power10.jpg" alt="Product">
+    <img src="power11.jpg" alt="Product">
+    <img src="power12.jpg" alt="Product">
+    <img src="power13.jpg" alt="Product">
+    <img src="power14.jpg" alt="Product">
+    <img src="power2.jpg" alt="Product">
+    <img src="power3.jpg" alt="Product">
+    <img src="power4.jpg" alt="Product">
+    <img src="power8.jpg" alt="Product">
+    <img src="power9.jpg" alt="Product">
+    <img src="power10.jpg" alt="Product">
+    <img src="power11.jpg" alt="Product">
+    <img src="power12.jpg" alt="Product">
+    <img src="power13.jpg" alt="Product">
+    <img src="power14.jpg" alt="Product">
+    <img src="power2.jpg" alt="Product">
+    <img src="power3.jpg" alt="Product">
+    <img src="power4.jpg" alt="Product">
+  </div>
+</section>
+
+<!-- ===================== THIRD GRID ROW ===================== -->
+<section class="grid-section">
+
+  <div class="grid-card">
+    <h3>Wireless Tech</h3>
+    <div class="mini-grid">
+      <div><img src="image1.jpg" alt="Smartphones"><p>Headphones</p></div>
+      <div><img src="image2.jpg" alt="Watches"><p>Wireless earphones</p></div>
+      <div><img src="image3.jpg" alt="Headphones"><p>Speaker</p></div>
+      <div><img src="image4.jpg" alt="Tablets"><p>Remote</p></div>
+    </div>
+    <a href="#" class="discover-link">Discover more</a>
+  </div>
+
+  <div class="grid-card">
+    <h3>Home essentials--Upto 80% off</h3>
+    <div class="mini-grid">
+      <div><img src="image5.jpg" alt="Coffee machines"><p>Pillows</p></div>
+      <div><img src="image6.jpg" alt="Gadgets"><p> Gadgets</p></div>
+      <div><img src="image7.jpg" alt="Power banks"><p>Power banks</p></div>
+      <div><img src="image8.jpg" alt="Phone holder"><p>Phone holder</p></div>
+    </div>
+    <a href="https://www.youtube.com/watch?v=kJa2kwoZ2a4&list=RDkJa2kwoZ2a4&start_radio=1" class="discover-link">Shop now</a>
+  </div>
+
+  <div class="grid-card">
+    <h3>New home arrivals under $50</h3>
+    <div class="mini-grid">
+      <div><img src="image9.jpg" alt="Kitchen & dining"><p>Bike</p></div>
+      <div><img src="image10.jpg" alt="Home improvement"><p>Home Improvement</p></div>
+      <div><img src="image11.jpg" alt="Decor"><p>Tools</p></div>
+      <div><img src="image12.jpg" alt="Bedding & bath"><p>Sofa</p></div>
+    </div>
+    <a href="https://www.youtube.com/watch?v=kJa2kwoZ2a4&list=RDkJa2kwoZ2a4&start_radio=1" class="discover-link">Shop the latest from Home</a>
+  </div>
+
+  <div class="grid-card">
+    <h3>Up to 30% off | Deals on new arrivals</h3>
+    <div class="mini-grid">
+      <div><img src="image13.jpg" alt="Ride ons"><p>Carpet</p></div>
+      <div><img src="image14.jpg" alt="Building & construction"><p>Boy toys</p></div>
+      <div><img src="image15.jpg" alt="Dolls & accessories"><p>Home storage</p></div>
+      <div><img src="image16.jpg" alt="Swimming pools"><p>Lightning Essentials</p></div>
+    </div>
+    <a href="https://www.youtube.com/watch?v=kJa2kwoZ2a4&list=RDkJa2kwoZ2a4&start_radio=1" class="discover-link">See all</a>
+  </div>
+
+</section>
+
+<!-- ===================== HORIZONTAL SCROLL ROW: HOME & KITCHEN ===================== -->
+<section class="scroll-section">
+  <h3>Welcome to RAZAMART | Home of deals!</h3>
+  <div class="scroll-row">
+    <img src="power15.jpg" alt="Product">
+    <img src="power16.jpg" alt="Product">
+    <img src="power17.jpg" alt="Product">
+    <img src="power18.jpg" alt="Product">
+    <img src="power19.jpg" alt="Product">
+    <img src="power20.jpg" alt="Product">
+    <img src="power21.jpg" alt="Product">
+    <img src="power22.jpg" alt="Product">
+    <img src="power23.jpg" alt="Product">
+    <img src="power24.jpg" alt="Product">
+    <img src="power21.jpg" alt="Product">
+    <img src="power15.jpg" alt="Product">
+    <img src="power16.jpg" alt="Product">
+    <img src="power17.jpg" alt="Product">
+    <img src="power18.jpg" alt="Product">
+    <img src="power19.jpg" alt="Product">
+    <img src="power20.jpg" alt="Product">
+    <img src="power21.jpg" alt="Product">
+    <img src="power22.jpg" alt="Product">
+    <img src="power23.jpg" alt="Product">
+    <img src="power24.jpg" alt="Product">
+    <img src="power21.jpg" alt="Product">
+    <img src="power15.jpg" alt="Product">
+    <img src="power16.jpg" alt="Product">
+    <img src="power17.jpg" alt="Product">
+    <img src="power18.jpg" alt="Product">
+    <img src="power19.jpg" alt="Product">
+    <img src="power20.jpg" alt="Product">
+    <img src="power21.jpg" alt="Product">
+    <img src="power22.jpg" alt="Product">
+    <img src="power23.jpg" alt="Product">
+    <img src="power24.jpg" alt="Product">
+    <img src="power21.jpg" alt="Product">
+  </div>
+  </div>
+</section>
+
+<!-- ===================== FEEDBACK STRIP ===================== -->
+<div class="feedback-strip">
+  After viewing product detail pages, look here to find an easy way to navigate back to pages you are interested in.
+</div>
+
+<!-- ===================== BACK TO TOP ===================== -->
+<a href="#top" class="back-to-top">Back to top</a>
+
+<!-- ===================== FOOTER LINKS ===================== -->
+<footer class="footer-links">
+  <div class="footer-column">
+    <h4>Get to know us</h4>
+    <a href="https://www.youtube.com/watch?v=SfT4FMkh1-w">Careers</a>
+    <a href="https://www.youtube.com/watch?v=feq6MOg3qpA&list=RDfeq6MOg3qpA&start_radio=1">Blog</a>
+    <a href="https://www.youtube.com/watch?v=ztUILwH8uz8&list=RDztUILwH8uz8&start_radio=1">About razamart</a>
+    <a href="https://www.youtube.com/watch?v=3TRHDvP6qtU&list=RD3TRHDvP6qtU&start_radio=1">Investor Relations</a>
+    <a href="https://www.youtube.com/watch?v=tS92P9PWNfU">razamart Devices</a>
+    <a href="https://www.youtube.com/shorts/kr_CyToWUvY">razamart Science</a>
+  </div>
+
+  <div class="footer-column">
+    <h4>Make money with us</h4>
+    <a href="https://www.youtube.com/shorts/TiIqHi7FuMM">Sell products on razamart</a>
+    <a href="#">Sell on razamart Business</a>
+    <a href="#">Sell apps on razamart</a>
+    <a href="#">Become an Affiliate</a>
+    <a href="#">Advertise Your Products</a>
+    <a href="#">Self-Publish with Us</a>
+    <a href="#">Host a razamart Hub</a>
+  </div>
+
+  <div class="footer-column">
+    <h4>razamart Payment Products</h4>
+    <a href="#">razamart Business Card</a>
+    <a href="#">Shop with Points</a>
+    <a href="#">Reload Your Balance</a>
+    <a href="#">razamart Currency Converter</a>
+  </div>
+
+  <div class="footer-column">
+    <h4>Let us help you</h4>
+    <a href="#">razamart and COVID-19</a>
+    <a href="#">Your Account</a>
+    <a href="#">Your Orders</a>
+    <a href="#">Shipping Rates & Policies</a>
+    <a href="#">Returns & Replacements</a>
+    <a href="#">Manage Your Content and Devices</a>
+    <a href="#">Help</a>
+  </div>
+</footer>
+
+<!-- ===================== FOOTER LOGO BAR ===================== -->
+<div class="footer-logo-bar">
+  <div class="footer-logo">razamart</div>
+  <div class="footer-settings">
+    <span><i class="fa-solid fa-globe"></i> English</span>
+    <span>$ USD - US Dollar</span>
+    <span>🇺🇸 United States</span>
+  </div>
+</div>
+
+<!-- ===================== FOOTER DARK LINKS ===================== -->
+<div class="footer-dark">
+  <div class="footer-dark-column">
+    <h5>razamart Music</h5>
+    <a href="#">Stream millions of songs</a>
+  </div>
+  <div class="footer-dark-column">
+    <h5>razamart Ads</h5>
+    <a href="#">Reach customers wherever they spend their time</a>
+  </div>
+  <div class="footer-dark-column">
+    <h5>6pm</h5>
+    <a href="#">Score deals on fashion brands</a>
+  </div>
+  <div class="footer-dark-column">
+    <h5>AbeBooks</h5>
+    <a href="#">Books, art & collectibles</a>
+  </div>
+  <div class="footer-dark-column">
+    <h5>ACX</h5>
+    <a href="#">Audiobook publishing made easy</a>
+  </div>
+  <div class="footer-dark-column">
+    <h5>Sell on razamart</h5>
+    <a href="#">Start a selling account</a>
+  </div>
+  <div class="footer-dark-column">
+    <h5>Goodreads</h5>
+    <a href="#">Book reviews & recommendations</a>
+  </div>
+  <div class="footer-dark-column">
+    <h5>IMDb</h5>
+    <a href="#">Movies, TV & celebrities</a>
+  </div>
+  <div class="footer-dark-column">
+    <h5>razamart Web Services</h5>
+    <a href="#">Scalable cloud computing services</a>
+  </div>
+  <div class="footer-dark-column">
+    <h5>Audible</h5>
+    <a href="#">Listen to books & podcasts</a>
+  </div>
+  <div class="footer-dark-column">
+    <h5>Box Office Mojo</h5>
+    <a href="#">Find movie box office data</a>
+  </div>
+  <div class="footer-dark-column">
+    <h5>ComiXology</h5>
+    <a href="#">Thousands of digital comics</a>
+  </div>
+  <div class="footer-dark-column">
+    <h5>Prime</h5>
+    <a href="#">Fast, free delivery, video, music & more</a>
+  </div>
+  <div class="footer-dark-column">
+    <h5>Shopbop</h5>
+    <a href="#">Designer fashion brands</a>
+  </div>
+</div>
+
+<div class="footer-copyright">
+  Conditions of Use &nbsp; Privacy Notice &nbsp; Interest-Based Ads &nbsp; Your Ads Privacy Choices
+  <br>
+  © 1996–2026, razamart.com, Inc. or its affiliates.
+</div>
+
+<script>
+  function toggleDropdown(id) {
+    const menu = document.getElementById(id);
+    const isOpen = menu.classList.contains('open');
+    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+    if (!isOpen) menu.classList.add('open');
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.lang-item') && !e.target.closest('.account-item')) {
+      document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+    }
+  });
+  
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.dot');
+
+  function showSlide(index) {
+    slides.forEach(s => s.classList.remove('active-slide'));
+    dots.forEach(d => d.classList.remove('active-dot'));
+    slides[index].classList.add('active-slide');
+    dots[index].classList.add('active-dot');
+  }
+
+  function changeSlide(direction) {
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function goToSlide(index) {
+    currentSlide = index;
+    showSlide(currentSlide);
+  }
+
+</script>
+
+</body>
+</html>
